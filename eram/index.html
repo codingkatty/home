@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eram</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        @font-face {
+            font-family: Pixelta;
+            src: url('../assets/Pixelta.ttf');
+        }
+
+        @font-face {
+            font-family: Pixel32;
+            src: url('../assets/pix32-custom-500-normal.woff2');
+        }
+
+        @font-face {
+            font-family: Thaim;
+            src: url('../assets/thaim-Regular.woff2');
+        }
+
+        h1 {
+            font-family: 'Pixelta';
+            font-size: 64px;
+            margin: 0;
+        }
+
+        h2 {
+            font-family: 'Pixelta';
+            font-size: 32px;
+            color:#f366b1;
+        }
+
+        p {
+            font-family: Pixel32;
+            color: #46313c;
+        }
+
+        .container {
+            border-top: 2px solid #ffbce5;
+            border-bottom: 2px solid #ffbce5;
+        }
+
+        .container div {
+            border: 2px solid #ffbce5;
+            padding: 10px 20px;
+        }
+
+        a {
+            color:#f366b1;
+            text-decoration-line: underline;
+            text-decoration-style: solid;
+        }
+
+        #halfr {
+            border: 1px solid #fcd0eb;
+            background-color: #fcd0eb;
+            width: 30%;
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        .card_t {
+            font-family: Pixelta;
+            font-size: 32px;
+            color: #f366b1;
+        }
+
+        .card_i {
+            margin-left: 1px;
+            height: 160px;
+        }
+
+        .card_b {
+            margin-bottom: 20px;
+            padding: 8px 12px;
+            background-color: #f366b1;
+            color: white;
+            border: none;
+            font-family: Pixelta;
+            font-size: 22px;
+            cursor:pointer;
+        }
+
+        .card_b:hover {
+            background-color: #ffa5dd;
+        }
+
+        .card_b:disabled {
+            background-color:#9b8894;
+            cursor:not-allowed;
+        }
+
+        .picthing {
+            width: 100%; 
+            margin:0 auto; 
+            text-align:center;
+            border: none !important;
+        }
+
+        .picthing p {
+            color: #928888;
+            margin-bottom: 80px;
+        }
+
+        hr {
+            display: block;
+            height: 1px;
+            border: 0;
+            border-top: 1px solid #f4bfe0;
+            margin: 2em 0;
+            padding: 0;
+        }
+
+        pre {
+            background-color: #fcd0eb;
+            padding: 10px 20px;
+            border-radius: 6px;
+            white-space: pre-wrap;
+            overflow-wrap: break-word;
+        }
+
+        @media screen and (min-width: 800px) {
+            .container-in-container {
+                margin-left:5%; 
+                margin-right: 5%;
+            }
+            #about {
+                width: 30%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            img {
+                width: 80% !important;
+            }
+
+            .picthing {
+                transform: translateX(-5%);
+            }
+        }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="../assets/Sprite-0001.png">
+</head>
+
+<body>
+    <div>
+        <div style="padding: 50px; padding-bottom: 20px;">
+            <h1 style="color: #f366b1;">making a chip!?!?!?</h1>
+            <p style="max-width: 400px;"><a href="https://github.com/codingkatty/eram" target="_blank">project github</a> / <a href="https://gds-explorer.tinytapeout.com/viewer?file=https://codingkatty.github.io/eram/tinytapeout.oas&pdk=gf180mcuD" target="_blank">3d viewer</a> / TW: spoilers for DELTARUNE</p>
+        </div>
+
+        <div class="container" style="padding-left: 50px;padding-right: 50px;">
+            <div class="container-in-container">
+                <h2>why would you do this candy</h2>
+                <p>
+                    This project was made for <a href="https://asic.hackclub.com" target="_blank">Hack Club #asic</a>! Basically they ran a program for very cool high schoolers and silly kids like me to design chips. I guess. Originally, I had no clue what I was even gonna make so I just procrastinated. Heck, I don't think I even planned to do the program. but one fateful day, I took a look at <a href="https://github.com/omrawaley/tt-pong-asic" target="_blank">Om's VGA Pong project</a>. and I was INSPIRED. I was like. WOW! you can do that? So I decided to make a game. But what game? And that's how I decided that I wanted to recreate the eram fight from deltarune because I was too obsessed with deltarune at that time.<br><br>
+
+                    The first thing I did was make sure <a href="https://en.wikipedia.org/wiki/Toby_Fox" target="_blank">Toby Fox</a> won't sue me for it. I still don't know if he would but.. whatever as long as he doesn't like send ♑︎♋︎⬧︎⧫︎♏︎❒︎ to kill me- I'm very chill with it. and after days of very hard work (i even did it in class and [redacted so my teacher won't kill me]), i made this!
+                </p>
+
+                <hr>
+
+                <div class="picthing">
+                    <img src="eram-vga-playground.gif" style="width:500px">
+                    <p>Final outcome of the game in VGA Playground</p>
+
+                    <img src="eram-compresed.gif" style="width:300px">
+                    <p>Game running on FPGA (Courtesy of <a href="https://silkscreen-studio-about-me.vercel.app/" target="_blank">Clém</a>!! Thank you so much!)</p>
+
+                    <img src="gds_render.png" style="width:500px">
+                    <p>Picture of the chip! Featuring da SOUL</p>
+                </div>
+
+                <hr>
+
+                <p>
+                    ok but how did i make it exactly?
+                </p>
+
+                <h2>le learning</h2>
+
+                <p>
+                    First i followed the resources section from the hack club asic website to learn Verilog, the language that would allow me to write scripts to make this very cool chip. Basically I went to <a href="https://hdlbits.01xz.net/wiki/Step_one" target="_blank">this website</a> that had a buncha questions and just did them. There was also another website that i read but i had no clue what it was saying. But after finishing like half of it I decided that it was too boring and just started to make the chip. because [insert this picture my friend once sent me]<br><br>
+                </p>
+
+                <div class="picthing">
+                    <img src="image (18).png" style="width:300px">
+                    <p>The picture.</p>
+                </div>
+
+                <h2>making</h2>
+
+                <p>
+                    I used <a href="https://vga-playground.com" target="_blank">VGA Playground</a> to make the thingy. Basically you could write code there and test it immediately. very cool. I decided what my version of it should include, which is basically just:<br><br>
+                </p>
+
+                <ol style="font-family:Thaim;">
+                    <li>you can walk</li>
+                    <li>you can stabby stab some image friends (to clarify, these are the cats with pink and yellow eyes)</li>
+                    <li>eram, maybe</li>
+                </ol>
+
+                <hr>
+
+                <p>
+                    this is how the original game looked like. (Of course, I'd say that the thing I made looked nothing like it)<br><br>
+                </p>
+
+                <div class="picthing">
+                    <img src="game_picture.png" style="width:300px">
+                    <p>Picture of the thing I was recreating.</p>
+                </div>
+
+                <p>
+                    I wasn't so sure what was actually possible to fit on the thing (well this was my first time) so I consulted dear google search AI (probably a bad idea i know). following our not very smart discussion, I ended up deciding that I'd make the map accurate to the game which is 12x8, have 8x8 sprites for characters, and each 'tile' would be 32x32 on screen pixels. cool. i also ended up dropping eram. I named the project 'walking simulator ft. IMAGE_FRIEND (Deltarune ch. 3)'<br><br>
+
+                    i started by understanding how to draw a square in this vga playground. so, from my understanding, there's <code>pix_x</code> and <code>pix_y</code>, which is the position of the pixel on the screen. you can tell it what color to show on that pixel. and well it just goes from there.<br><br>
+
+                    the first thing i tried was to draw a rectangle, which was the 'game screen', as mentioned above, i did some math and figured out the numbers for a 384x256 rectangle centered on a 640x480 screen. <code>in_screen</code> just checks if <code>pix_x</code> and <code>pix_y</code> is in those boundaries:
+                </p>
+
+                <pre>
+                    <code>
+wire in_screen = (pix_x >= 10'd128) && (pix_x < 10'd512) && (pix_y >= 10'd112) && (pix_y < 10'd368);
+                    </code>
+                </pre>
+
+                <p>
+                    and then sets the pixel color
+                </p>
+
+                <pre>
+                    <code>
+reg [5:0] pixel_color;
+
+always @(*) begin
+    if (!video_active)
+        pixel_color = 6'b00_00_00;
+    else if (in_screen)
+        pixel_color = 6'b01_00_10;
+    else
+        pixel_color = 6'b00_00_00;
+end
+                    </code>
+                </pre>
+
+                <p>
+                    then R G B is set from pixel_color
+                </p>
+
+                <pre>
+                    <code>
+assign R = pixel_color[5:4];
+assign G = pixel_color[3:2];
+assign B = pixel_color[1:0];
+                    </code>
+                </pre>
+
+                <p>
+                    which would be outputted to the TinyVGA PMOD
+                </p>
+
+                <pre>
+                    <code>
+assign uo_out = {hsync, B[0], G[0], R[0], vsync, B[1], G[1], R[1]};
+                    </code>
+                </pre>
+
+                <div class="picthing">
+                    <br><br>
+                    <img src="purple_rect.png" style="width:300px">
+                    <p>Wow! a purple rectangle!</p>
+                </div>
+
+                <p>
+                    so yeah that's more or less how it works. the rest is basically built upon this, with more 'flags' like <code>in_screen</code> but for the tiles, characters and enemies.
+                </p>
+
+                <h2>fun stuff (characters)</h2>
+
+                <p>
+                    i'm pretty sure the original characters were 16x16 so i had to scale em down to 8x8. so I did that in aseprite. there's actually a limited amount of colors this can output, so I used <a href="https://www.1728.org/64colorsrow.htm" target="_blank">https://www.1728.org/64colorsrow.htm</a> to see my avaiable options. which was actually a lot.<br><br>
+
+                    I choose the colors that are most similar to the original based on their actual values I colorpicked and/or gut feeling. the closest color might not be the one that looks 'right', so it was quite fun to tune around abit and see what fits. and like here's the stuff corresponding to the values (i think)
+                </p>
+
+                <pre>
+                    <code>
+00: 00
+55: 01
+AA: 10
+FF: 11
+                    </code>
+                </pre>
+
+                <div class="picthing">
+                    <br><br>
+                    <img src="silly_goober.png" style="width:300px">
+                    <p>8-bit Kris in Aseprite (i ended up using another shade of cyan)</p>
+
+                    <img src="le_choice.png" style="width:300px">
+                    <p>Me picking colors! Left is colorpicked from screenshot.</p>
+                </div>
+
+                <p>
+                    and wow! we have.. something! since every sprite had like more than 4 colors (if you include like transparent pixels), the color of each pixel is stored as a 3-bit value.
+                </p>
+
+                <pre>
+                    <code>
+case (kris_color_r)
+  3'b001: pixel_color = 6'b01_00_11;
+  3'b010: pixel_color = 6'b10_10_11;
+  3'b011: pixel_color = 6'b00_11_11;
+  3'b100: pixel_color = 6'b11_00_01;
+  default: pixel_color = 6'b00_00_00;
+endcase
+                    </code>
+                </pre>
+
+                <p>repeat again for IMAGE_FRIEND, and we're done.....!</p>
+
+                <h2>gah gah gah gah buttons</h2>
+
+                <p>
+                    so there's actually this thing called gamepad pmod but I'm lwk not sure if i could even get one + the console in the first place, so i'm making my own stupid console. I had no clue how to implement it at first but i heard ja need a debouncer script for tactile buttons so i stole it from somewhere online (<a href="https://chipverify.com/verilog/verilog-debounce-circuit" target="_blank">here</a>) so basically we have 5 buttons, Up/Down/Left/Right/Action that just map to ui_in 0 to 4<br><br>
+
+                    i will somehow make the gamepad myself (and I actually have a kinda cool case design idea). the buttons would be active low, which means that it is 0 when pressed and 1 when normal. when testing my project on VGA playground, i use an input mapper and just spam my keys.
+                </p>
+
+                <div class="picthing">
+                    <br><br>
+                    <img src="active_low.jpg" style="width:300px">
+                    <p>Schematic of active low button from somewhere on the internet</p>
+                </div>
+
+                <p>
+                    i also did some research on how to make a d-pad like the one you see on controllers. apparently someone did it by putting a pyramid/wedge thing in the middle of the 4 buttons, so i'll do that as well. i also found these <a href="https://www.adafruit.com/product/3101" target="_blank">soft tactile buttons</a> that i might use.
+                </p>
+
+                <h2>ja.. input!</h2>
+
+                <p>
+                    originally, i had like 5 debouncer instances, but (see optimization section below) google ai taught me that i could actually just have one and save space. i did not really think of that before. anyways, the debouncer module basically just makes the output 1/true when the button is released.
+                </p>
+
+                <pre>
+                    <code>
+wire [4:0] btns;
+debouncer all (clk, rst_n, ui_in[4:0], btns);
+
+wire up = btns[0];
+wire down = btns[1];
+wire left = btns[2];
+wire right = btns[3];
+wire x = btns[4];
+                    </code>
+                </pre>
+
+                <p>
+                    we store the x and y of kris. they can be anywhere in the 12x8 map which means those values can be 0-11 or 0-7. so x is 4 bits while y is 3 bits. to add collision so our dear kris doesn't phase into walls, we first put their expected location into <code>next_x</code> and <code>next_y</code> based on what they pressed
+                </p>
+
+                <pre>
+                    <code>
+next_x = kris_x;
+next_y = kris_y;
+next_dir = last_dir;
+
+if (up) begin
+  next_y = kris_y + 3'd1;
+  next_dir = 2'b00;
+end else if (down) begin
+  next_y = kris_y - 3'd1;
+  next_dir = 2'b01;
+end else if (left) begin
+  next_x = kris_x - 4'd1;
+  next_dir = 2'b10;
+end else if (right) begin
+  next_x = kris_x + 4'd1;
+  next_dir = 2'b11;
+end
+                    </code>
+                </pre>
+                
+                <p>
+                    then, we check for <code>is_wall</code>, which is kinda just the same thing we use to check if we should draw the tile in the pixel. and if the position they want to go is not a wall, we move them there.
+                </p>
+
+                <pre>
+                    <code>
+if (!is_wall) begin
+  kris_x <= next_x;
+  kris_y <= next_y;
+  last_dir <= next_dir;
+end
+                    </code>
+                </pre>
+
+                <h2>IMAGE_FRIEND</h2>
+
+                <div class="picthing">
+                    <br><br>
+                    <img src="IMAGE_FRIEND.png" style="width:300px">
+                    <p>8-bit FRIEND in Aseprite</p>
+                </div>
+
+                <p>
+                    oh well.. ze image friend. I actually have no clue how I was gonna make it move, but well.. here it is! I originally wanted it to chase kris but i have no clue how to do it so now its super predictable. basically, each of them has a 'direction' which changes when they were to hit a wall. though eventually, they move into a 'stable' state where they all just move along a specific path. which is, kinda weird but whatever. There are 3 friend characters and they all have different ways to change their directions to make sure they don't eventually just follow each other and stuff. they also have different initial starting positions and directions.<br><br>
+
+                    these are how the movement is determined based on the 'direction'. its the same for all friends.
+                </p>
+
+                <pre>
+                    <code>
+case (friend_dir_1)
+  2'b00: fn_y_1 = friend_y_1 + 3'd1;
+  2'b01: fn_y_1 = friend_y_1 - 3'd1;
+  2'b10: fn_x_1 = friend_x_1 - 4'd1;
+  2'b11: fn_x_1 = friend_x_1 + 4'd1;
+endcase
+                    </code>
+                </pre>
+
+                <p>
+                    here are the lines extracted from the code, where the friends change direction
+                </p>
+
+                <pre>
+                    <code>
+friend_dir_1 <= friend_dir_1 + 2'b01;
+friend_dir_2 <= friend_dir_2 - 2'b01;
+friend_dir_3 <= friend_dir_3 + 2'b10;
+                    </code>
+                </pre>
+
+                <p>
+                    friend 3 actually never moves vertically.<br>
+                    stabbing friends at the correct time can also make some interesting things, like 3 friends lined up together.
+                </p>
+
+                <h2>huh stabbing friends!?!?</h2>
+
+                <p>
+                    after each sucessful move, the direction is stored. the direction you go to basically determine where you hit. maybe its kinda stupid but well i guess it works. target x/y are the coordinates of the place your attack will land, and after x/y would be same as the place kris would be after checking for <code>is_wall</code>. 
+                </p>
+
+                <pre>
+                    <code>
+always @(*) begin
+  target_x = after_x;
+  target_y = after_y;
+  case (next_dir)
+    2'b00: target_y = after_y + 3'd1;
+    2'b01: target_y = after_y - 3'd1;
+    2'b10: target_x = after_x - 4'd1;
+    2'b11: target_x = after_x + 4'd1;
+  endcase
+end
+                    </code>
+                </pre>
+
+                <p>
+                    we can check if we hit a friend when x is pressed and the target coordinates matches the friend's coordinates.
+                </p>
+
+                <pre>
+                    <code>
+wire hit_f1 = (x && (target_x == friend_x_1) && (target_y == friend_y_1)) || (show_slct && (slct_x == friend_x_1) && (slct_y == friend_y_1));
+                    </code>
+                </pre>
+
+                <p>
+                    <code>show_slct</code> is added so that the hit would last longer. a tick for this game happens every 12500000 clock cycles. <code>slash_timer</code> is used to make the attack work until the next pulse
+                </p>
+
+                <pre>
+                    <code>
+reg slash_timer;
+wire show_slct = (slash_timer != 1'd0);
+
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        ...
+    end else begin
+        ...
+
+        if (x) begin
+            slash_timer <= 1'd1;
+        end else if (tickki && (slash_timer != 1'd0)) begin
+            slash_timer <= 1'd0;
+        end
+    end
+end
+                    </code>
+                </pre>
+
+                <h2>optimization</h2>
+
+                <p>
+                    so I ran the generate gds thing and realized that it wasn't actually gonna fit. I had friggin no clue on how to fix it and i was so desprate I asked google search ai... again. skull. then uhhjh and then it pointed out how stupid and inefficient my code was. so according to its suggestion I removed some things and made the stuff share a single instance (eg the characters and buttons). which like i didn't know you could do that.<br><br>
+
+                    it also did some things that i literally don't know how it worked. (gasp) but IT WORKED. its like, i have no clue <i>why</i> or how it worked, but it worked just like how it worked before. !!! gasp gasp gasp!!! the thing i understood was something like, my previous script was doing too much in one clock cycle. i hope my understanding was correct.<br><br>
+
+                    so I added some silicon art. and then it <span style="color:red;">broke</span>. oh shittings.
+                </p>
+
+                <div class="picthing">
+                    <br><br>
+                    <img src="shittings.png" style="width:600px">
+                    <p>despair.</p>
+                </div>
+
+                <h2>silicon art!</h2>
+
+                <p>
+                    so, i followed <a href="https://tinytapeout.com/guides/creating-silicon-art " target="_blank">https://tinytapeout.com/guides/creating-silicon-art</a> to add the soul image in my chip. it was... an interesting process. the guide was pretty good at explaining some of the stuff such as how to make the art but it didn't really say how to add it for GF180 shuttles. and I couldn't exactly find a tutorial specifically for that so I just tried till it worked.<br><br>
+
+                    the art was a 9x9 pixelart of the SOUL from deltarune. because i felt like it was kinda badass to add that as silicon art. at first i drew it in aseprite and then manually inserted the points to a python script (see below) as a polygon. at the end, each pixel were 3um big so i multiplied everything by 3. at some point i also realized that i had made it upside down- as i thought 0,0 started from the top left.<br><br>
+                </p>
+
+                <div class="picthing">
+                    <br><br>
+                    <img src="soul.png" style="width:300px">
+                    <p>the soul. in aseprite.</p>
+                </div>
+
+                <p>
+                    originally, the pixels were actually 6um by 6um, so after adding the art, it failed because it was too big. it was only after that i changed the size of the pixels to a smaller size.<br>
+
+                    also i kept getting these errors from the precheck workflow
+                </p>
+
+                <pre>
+                    <code>
+ERROR: Port VGND is too far from top edge of module: 109.46 > 10 um
+ERROR: Port VDPWR is too far from top edge of module: 109.46 > 10 um
+                    </code>
+                </pre>
+
+                <p>
+                    thing is, I had no clue why they were happening and how to fix them. i tried to make the art even smaller, put it on other layers... and eventually, something worked.<br>
+                    gah. at last, i moved the art to <code>Metal3</code> and its position to <code>145, 55</code> and it SOMEHOW WORKED. well dear google search ai... you can have my thanks for that cuz i jenuinely would not have figured that out. i did not even understand the logic behind it. bruh.
+                </p>
+
+                <div class="picthing">
+                    <br><br>
+                    <img src="old_gds_render.png" style="width:500px">
+                    <p>the old location of the heart that didn't work</p>
+                </div>
+
+                <p>
+                    other than that, the workflow to make the fpga bitstream kept failing because of the art. apparently i had to wrap the things in <code>project.v</code> with these:
+                </p>
+
+                <pre>
+                    <code>
+`ifdef ASIC
+    (* blackbox *) (* keep *)
+    module soul ();
+    endmodule
+`endif
+                    </code>
+                </pre>
+
+                <p>
+                    and
+                </p>
+
+                <pre>
+                    <code>
+`ifdef ASIC
+    (* keep *)
+    soul logo ();
+`endif
+                    </code>
+                </pre>
+                
+                <p>
+                    and add this to config.json
+                </p>
+
+                <pre>
+                    <code>
+"VERILOG_DEFINES": [
+    "ASIC"
+]
+                    </code>
+                </pre>
+
+                <p>
+                    at the end, this was my script to make the art.
+                </p>
+
+                <pre>
+                    <code>
+import gdstk
+
+CELL_NAME = "soul"
+
+# bweeh i have no clue how this workies (skulk)
+ART_LAYER, ART_DATATYPE = 42, 0   # Metal3
+BOUNDARY_LAYER, BOUNDARY_DATATYPE = 0, 0
+
+
+def write_lef(filename, cell_name, bounds):
+    """Write a minimal LEF file with Metal4 obstruction. bounds = (xmin, ymin, xmax, ymax)."""
+    width = bounds[2] - bounds[0]
+    height = bounds[3] - bounds[1]
+    with open(filename, "w") as f:
+        f.write(f"# LEF file generated for {cell_name}\n")
+        f.write("VERSION 5.8 ;\n")
+        f.write("NAMESCASESENSITIVE ON ;\n")
+        f.write("DIVIDERCHAR \"/\" ;\n")
+        f.write("BUSBITCHARS \"[]\" ;\n")
+        f.write("UNITS\n")
+        f.write("   DATABASE MICRONS 1000 ;\n")
+        f.write("END UNITS\n\n")
+        f.write(f"MACRO {cell_name}\n")
+        f.write("   CLASS BLOCK ;\n")
+        f.write(f"   FOREIGN {cell_name} 0 0 ;\n")
+        f.write(f"   SIZE {width:.3f} BY {height:.3f} ;\n")
+        f.write("   SYMMETRY X Y ;\n")
+        f.write("   OBS\n")
+        f.write("      LAYER Metal3 ;\n")
+        f.write(f"         RECT {bounds[0]:.3f} {bounds[1]:.3f} {bounds[2]:.3f} {bounds[3]:.3f} ;\n")
+        f.write("   END\n")
+        f.write(f"END {cell_name}\n")
+
+
+lib = gdstk.Library()
+cell = lib.new_cell(CELL_NAME)
+
+cell_width, cell_height = 27, 27
+
+# PR boundary — required for macro placement
+cell.add(gdstk.rectangle(
+    (0, 0), (cell_width, cell_height),
+    layer=BOUNDARY_LAYER, datatype=BOUNDARY_DATATYPE,
+))
+
+points = [(0, 24), (3, 24), (3, 27), (9, 27), (9, 24), (12, 24), (12, 21), (15, 21), (15, 24), (18, 24), (18, 27), (24, 27), (24, 24), (27, 24), (27, 12), (24, 12), (24, 9), (21, 9), (21, 6), (18, 6), (18, 3), (15, 3), (15, 0), (12, 0), (12, 3), (9, 3), (9, 6), (6, 6), (6, 9), (3, 9), (3, 12), (0, 12)]
+
+poly = gdstk.Polygon(points, layer=ART_LAYER, datatype=ART_DATATYPE)
+
+# Simple art: one met4 rectangle
+cell.add(poly)
+
+cell.write_svg("../macros/soul.svg")
+lib.write_gds("../macros/soul.gds")
+
+bounds = (0, 0, cell_width, cell_height)
+write_lef("../macros/soul.lef", CELL_NAME, bounds)
+                    </code>
+                </pre>
+
+                <h2>reflection</h2>
+
+                <p>
+                    well, i kinda did what i wanted, but maybe i was too focused to want to make it done I used dear google search ai wayyy to much than I wished. it helped me fix the 29384579384 bugs and i guess it sorta provided me some idea on how to start this project in the first place, and how to implement things like pixel art (and to fix the weird bugs that i genuinely wouldn't have figured out, like once my sprites only showed the 3 columns of pixels on the right. i figured out what was causing it, but i couldn't find why)<br><br>
+
+                    oh hey at least i made something. i sure hope no one goes like 'yo remember the time you were so obsessed with deltarune you recreated that eram fight thing!?!' a couple years later.
+                </p>
+
+                <div class="picthing">
+                    <br><br>
+                    <img src="cool_pic.png" style="width:500px">
+                    <p>blue,,, heart</p>
+                </div>
+
+                <br><br><br><br>
+            </div>
+        </div>
+    </div>
+    <div style="background-color:#f791c7; padding: 50px;">
+        <h1 style="color: white;">thanks for reading!</h1>
+        <div>
+            <p style="color: white;">made by candy, v5 of ts <a href="https://candyisakat.dev" style="color: white;">site</a><br>..god i wonder how is it the v5</p>
+        </div>
+    </div>
+
+    <script>
+        function openLink(link) {
+            window.open(link, "_blank")
+        }
+    </script>
+</body>
+</html>
